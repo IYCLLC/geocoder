@@ -1,0 +1,33 @@
+{
+    "name": "IYCLLC/geocoder",
+    "type": "library",
+    "description": "IYC service for google geo location",
+    "homepage": "https://github.com/IYCLLC/geocoder",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Harut Grigoryan",
+            "email": "harut.grigoryan@ifyoucan.com"
+        }
+    ],
+    "autoload": {
+        "psr-4" : {
+            "IYC\\Geocoder\\" : "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.1",
+        "illuminate/support": "^5.0",
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "IYC\\Geocoder\\Providers\\GeocoderServiceProvider"
+            ],
+            "aliases": {
+                "Geocoder": "IYC\\Geocoder\\Facades\\Geocoder"
+            }
+        }
+    }
+}
