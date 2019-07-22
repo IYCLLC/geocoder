@@ -17,7 +17,8 @@ class Address extends Resource
             'id'         => $this->resource['place_id'],
             'latitude'   => $this->resource['lat'],
             'longitude'  => $this->resource['lng'],
-            'address'    => $this->resource['formatted_address']
+            'address'    => $this->resource['formatted_address'],
+            'name'       => $this->resource['address_components'][0]->long_name ?? '',
         ];
     }
 }
